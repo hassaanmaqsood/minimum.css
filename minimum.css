@@ -5,9 +5,9 @@
 :root {
   /* --- General Colors --- */
   --white: 255, 255, 255; /* #fff */
-  --off-white: 255, 255, 255 / 10%; /* #f9f9f9 */
+  --off-white: 249, 249, 249; /* #f9f9f9 */
   --black: 0 0 0; /* #000 */
-  --grey: 0 0 0 / 10%; /* #242424 */
+  --grey: 36, 36, 36; /* #242424 */
 
   /* --- Color Scheme based on usage type --- */
   --lowlight-text: var(--grey);
@@ -24,6 +24,22 @@
 ::selection {
   color: rgb(var(--highlight-text));
   background-color: rgb(var(--highlight-bg));
+}
+
+::-webkit-scrollbar {
+  width: calc(0.25rem * var(--size));
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  border-radius: calc(0.625rem * var(--size));
+  background: rgba(var(--highlight-text), 0.7);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: calc(0.625rem * var(--size));
+  background: rgba(var(--highlight-bg), 0.45);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--highlight-bg), 0.85);
 }
 
 article {
